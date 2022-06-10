@@ -1,0 +1,21 @@
+#As bibliotecas necessárias são importadas: 
+
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+
+#A imagem é carregada
+
+img = cv2.imread('opencv_logo.png')
+
+#Aplicação do filtro
+
+blur = cv2.blur(img,(5,5))
+
+#Escreve “Original” e “Blurred” nas imagens correspondentes e mostra elas
+
+plt.subplot(121),plt.imshow(img),plt.title('Original')
+plt.xticks([]), plt.yticks([])
+plt.subplot(122),plt.imshow(blur),plt.title('Blurred')
+plt.xticks([]), plt.yticks([])
+plt.show()
